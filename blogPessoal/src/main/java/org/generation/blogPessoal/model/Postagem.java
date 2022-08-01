@@ -1,6 +1,7 @@
 package org.generation.blogPessoal.model;
 
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "postagem")
@@ -18,24 +22,24 @@ public class Postagem {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	
-	@NotNull
-	@Size(min = 5, max = 100)
+	@NotBlank(message = "O atributo título é Obrigatório e não pode utilizar espaços em branco!") 
+	@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 05 e no máximo 100 caracteres")
 	private String titulo;
 	
-	@NotNull
-	@Size(min = 10, max = 500)
+	@NotNull(message = "O atributo texto é Obrigatório")
+	@Size(min = 10, max = 1000, message = "O atributo título deve conter no mínimo 10 e no máximo 1000 caracteres")
 	private String texto;
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date data = new java.sql.Date(System.currentTimeMillis());
+	@UpdateTimestamp
+	private LocalDateTime data;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -55,12 +59,15 @@ public class Postagem {
 		this.texto = texto;
 	}
 
-	public Date getDate() {
+	public LocalDateTime getData() {
 		return data;
 	}
 
-	public void setDate(Date data) {
+	public void setData(LocalDateTime data) {
 		this.data = data;
 	}
+
+	
+	
 
 }
