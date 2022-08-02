@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,9 +17,11 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "postagem")
-public class Postagem {
+public class PostagemModel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +38,11 @@ public class Postagem {
 	@UpdateTimestamp
 	private LocalDateTime data;
 
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private TemaModel tema;
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -67,7 +75,13 @@ public class Postagem {
 		this.data = data;
 	}
 
-	
+	public TemaModel getTema() {
+		return tema;
+	}
+
+	public void setTema(TemaModel tema) {
+		this.tema = tema;
+	}
 	
 
 }
