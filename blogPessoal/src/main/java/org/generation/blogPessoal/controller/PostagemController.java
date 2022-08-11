@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 @RestController
 @RequestMapping("/postagens")
 //@CrossOrigin(origins= "*", allowedHeders = "*") - maneira não abreviada
@@ -33,10 +35,10 @@ public class PostagemController {
 		return ResponseEntity.ok(repository.findAll()); 
 	}
 	@GetMapping ("/{id}")
-	public ResponseEntity<PostagemModel> GetById(@PathVariable Long id){
+	public ResponseEntity<PostagemModel> getById(@PathVariable Long id) {
 		return repository.findById(id)
-				.map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.notFound().build());
+			.map(resposta -> ResponseEntity.ok(resposta))
+			.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping ("/titulo/{titulo}")
