@@ -1,4 +1,4 @@
-package org.generation.blogPessoal.Servise;
+package org.generation.blogPessoal.Service;
 
 import java.nio.charset.Charset;
 
