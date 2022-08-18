@@ -4,7 +4,7 @@
 ## Blog Pessoal Realizado durante a Generation
 - Turma: 55<3
 - Professoras Orientadoras: Jessica Lopes e Michelle de Souza
-- O Blog pessoal esta sendo desenvolvidos nas seguintes tecnologias: 
+- O Blog pessoal esta sendo desenvolvidos usando as seguintes tecnologias: 
 <div style="display: inline_block"><br>
 <img align="center" alt="Naty-Java" height="40" width="40" <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
 <img align="center" alt="Naty-My" height="40" width="40"<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
