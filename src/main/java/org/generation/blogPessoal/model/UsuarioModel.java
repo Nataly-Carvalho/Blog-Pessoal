@@ -16,27 +16,30 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_usuarios")
 public class UsuarioModel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
+	private Long id;
 	
 	@NotNull(message = "O atributo Nome é Obrigatorio")
-	public String nome;
+	private String nome;
 	
+	@Schema(example = "email@email.com.br")
 	@NotNull(message = "O Atributo Usuário é Obrigatório")
 	@Email(message = "O atributo Usuário deve ser um email valido")
-	public String usuario;
+	private String usuario;
 	
 	@NotBlank(message= "O atributo senha é Obrigatório")
 	@Size(min=8, message = "A senha deve ter no minimo 8 caracteres")
-	public String senha;
+	private String senha;
 	
 	@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
-	public String foto;
+	private String foto;
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
