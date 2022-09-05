@@ -27,15 +27,15 @@ public class UsuarioRepositoryTest {
 		
 		usuarioRepository.deleteAll(null);
 		
-		usuarioRepository.save(new UsuarioModel(0L,"maria carvalho","maria@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg"));
+		usuarioRepository.save(new UsuarioModel(0L,"maria carvalho","maria@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg", ""));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"juliana silva","juliana@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg"));
+		usuarioRepository.save(new UsuarioModel(0L,"juliana silva","juliana@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg", ""));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Marcelo almeida","maarcelo@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg"));
+		usuarioRepository.save(new UsuarioModel(0L,"Marcelo almeida","maarcelo@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg",""));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Adriana silva","adriana123@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg"));
+		usuarioRepository.save(new UsuarioModel(0L,"Adriana silva","adriana123@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg",""));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Paulo silva","Paulo_M@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg"));
+		usuarioRepository.save(new UsuarioModel(0L,"Paulo silva","Paulo_M@email.com.br","12345678","https://i.imgur.com/qZXsFyj.jpeg", ""));
 	}
 	
 	@Test
