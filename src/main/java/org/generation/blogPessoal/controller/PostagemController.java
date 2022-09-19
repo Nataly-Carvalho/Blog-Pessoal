@@ -23,8 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/postagens")
-//@CrossOrigin(origins= "*", allowedHeders = "*") - maneira não abreviada
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemController {
 
 	@Autowired
