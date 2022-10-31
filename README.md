@@ -8,7 +8,7 @@
 
 - Link do deploy: https://mazipan-blog.netlify.app/#/inicio
 
-- O Blog pessoal esta sendo desenvolvidos usando as seguintes tecnologias: 
+- O Blog pessoal foi desenvolvido e esta sendo atualizado usando as seguintes tecnologias: 
 <div style="display: inline_block"><br>
 <img align="center" alt="Naty-Java" height="40" width="40" <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
 -
